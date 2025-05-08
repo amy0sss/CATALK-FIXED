@@ -4,6 +4,8 @@
              x:Class="CaTALK.MVVM.Views.Home"
              Title="Home">
     <VerticalStackLayout>
+
+        <Image Source="{Binding Avatar}"/>
         <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 

@@ -29,6 +29,8 @@ namespace CaTALK.MVVM.ViewModels
         private string _username;
         private string _password;
         private string _confirmPassword;
+        private string _avatar;
+        public ObservableCollection<User> Users = new ObservableCollection<User>();
         #endregion
 
         public UserManagement()
@@ -42,6 +44,15 @@ namespace CaTALK.MVVM.ViewModels
         }
 
         #region OnPropertyChanged
+        public string Avatar
+        {
+            get => _avatar;
+            set
+            {
+                _avatar = value;
+                OnPropertyChanged();
+            }
+        }
         public bool IsPassword
         {
             get => _isPassword;
@@ -121,19 +132,23 @@ namespace CaTALK.MVVM.ViewModels
 
             var response = await client.GetStringAsync($"{baseUrl}/User");
             var users = JsonSerializer.Deserialize<List<User>>(response, _serializerOptions);
-            var user = users.FirstOrDefault(u => u.username == Username && u.password == Password);
+            var user = users?.FirstOrDefault(u => u.username == Username && u.password == Password);
 
+            Console.Write($"Logging Results: {users}");
             if (user != null)
             {
-                await App.Current.MainPage.DisplayAlert("Success", "Login successful!", "OK");
+                Users.Add(user);
+                // Improve
+                Avatar = Users[0].avatar;
+                Console.Write($"Logging Results: {Users}/n Avatar: {Avatar}");
 
+                await App.Current.MainPage.DisplayAlert("Success", "Login successful!", "OK");
                 await App.Current.MainPage.Navigation.PushAsync(new Home());
             }
             else
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Invalid username or password.", "OK");
             }
-
         });
         #endregion
 

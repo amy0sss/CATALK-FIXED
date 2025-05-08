@@ -1,45 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\",
+  "WorkspaceRootPath": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\mvvm\\viewmodels\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\mvvm\\viewmodels\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\viewmodels\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\mvvm\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\mvvm\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\mvvm\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\mvvm\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\mvvm\\views\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\mvvm\\views\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\home.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\mvvm\\views\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\mvvm\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\mvvm\\views\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\home.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\mvvm\\views\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\mvvm\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\mvvm\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\mvvm\\views\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\source\\repos\\catalk\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\mvvm\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -54,37 +54,37 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Home.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Home.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Home.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\Home.xaml.cs",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Home.xaml.cs",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Home.xaml.cs",
               "RelativeToolTip": "MVVM\\Views\\Home.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T07:35:58.666Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Home.xaml",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Home.xaml",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Home.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\Home.xaml",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Home.xaml",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Home.xaml",
               "RelativeToolTip": "MVVM\\Views\\Home.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-07T07:34:25.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "Register.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Register.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Register.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\Register.xaml.cs",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Register.xaml.cs",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Register.xaml.cs",
               "RelativeToolTip": "MVVM\\Views\\Register.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -93,24 +93,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Login.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Login.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\Login.xaml.cs",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Login.xaml.cs",
               "RelativeToolTip": "MVVM\\Views\\Login.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T07:25:00.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Register.xaml",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Register.xaml",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Register.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\Register.xaml",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Register.xaml",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Register.xaml",
               "RelativeToolTip": "MVVM\\Views\\Register.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
@@ -119,13 +119,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Login.xaml",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Login.xaml",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Login.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\Login.xaml",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Views\\Login.xaml",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Login.xaml",
               "RelativeToolTip": "MVVM\\Views\\Login.xaml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-07T07:24:31.491Z",
               "EditorCaption": ""
@@ -134,48 +134,46 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UserManagement.cs",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\ViewModels\\UserManagement.cs",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\ViewModels\\UserManagement.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\UserManagement.cs",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\ViewModels\\UserManagement.cs",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\ViewModels\\UserManagement.cs",
               "RelativeToolTip": "MVVM\\ViewModels\\UserManagement.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAIEAAAAAAAAAAADwv4wAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T07:24:08.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Models\\User.cs",
               "RelativeDocumentMoniker": "MVVM\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\MVVM\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Models\\User.cs",
               "RelativeToolTip": "MVVM\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T07:23:58.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T07:23:58.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\App.xaml.cs",
               "RelativeToolTip": "App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T07:23:27.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T07:23:27.387Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\source\\repos\\CATALK\\App.xaml",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",

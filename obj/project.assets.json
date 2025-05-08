@@ -33167,11 +33167,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACT-STUDENT\\source\\repos\\CaTALK\\CaTALK.csproj",
+      "projectUniqueName": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\CaTALK.csproj",
       "projectName": "CaTALK",
-      "projectPath": "C:\\Users\\ACT-STUDENT\\source\\repos\\CaTALK\\CaTALK.csproj",
+      "projectPath": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\CaTALK.csproj",
       "packagesPath": "C:\\Users\\ACT-STUDENT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACT-STUDENT\\source\\repos\\CaTALK\\obj\\",
+      "outputPath": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
