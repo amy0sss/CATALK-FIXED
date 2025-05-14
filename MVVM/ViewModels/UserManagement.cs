@@ -121,6 +121,7 @@ namespace CaTALK.MVVM.ViewModels
         public ICommand ToggleConfirmPasswordCommand => new Command(() => IsConfirmPassword = !IsConfirmPassword);
 
         #endregion
+
         #region LOGIN
         public ICommand Login => new Command(async () =>
         {
@@ -130,19 +131,21 @@ namespace CaTALK.MVVM.ViewModels
                 return;
             }
 
-            var response = await client.GetStringAsync($"{baseUrl}/User");
-            var users = JsonSerializer.Deserialize<List<User>>(response, _serializerOptions);
-            var user = users?.FirstOrDefault(u => u.username == Username && u.password == Password);
+            var encodedUsername = Uri.EscapeDataString(Username);
+            var response = await client.GetStringAsync($"{baseUrl}User/?username={encodedUsername}");
 
-            Console.Write($"Logging Results: {users}");
+            var users = JsonSerializer.Deserialize<ObservableCollection<User>>(response, _serializerOptions);
+            var user = users?.FirstOrDefault(u => u.password == Password);
+
+            Console.Write("Test");
+            Console.WriteLine($"Logging Results: {user}");
             if (user != null)
             {
                 Users.Add(user);
                 // Improve
-                Avatar = Users[0].avatar;
-                Console.Write($"Logging Results: {Users}/n Avatar: {Avatar}");
+                Avatar = user.avatar;
+                Console.WriteLine($"Logging Results: {Users}\n Avatar: {Avatar}");
 
-                await App.Current.MainPage.DisplayAlert("Success", "Login successful!", "OK");
                 await App.Current.MainPage.Navigation.PushAsync(new Home());
             }
             else

@@ -5,9 +5,9 @@
              Title="Home">
     <VerticalStackLayout>
 
-        <Image Source="{Binding Avatar}"/>
+        <Image Source="{Binding Avatar, FallbackValue='user.png'}"/>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="{Binding Name, FallbackValue='Username'}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
