@@ -6,6 +6,6 @@ public partial class Home : ContentPage
 	public Home()
 	{
 		InitializeComponent();
-		BindingContext = new UserManagement();
+		this.BindingContext = new UserManagement();
 	}
 }

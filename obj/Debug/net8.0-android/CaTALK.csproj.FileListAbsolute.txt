@@ -1083,11 +1083,6 @@ C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\maui
 C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\f\FluentUI.cs
 C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\f\OpenSans-Semibold.ttf
-C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
-C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
-C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
-C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
-C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
 C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\r\mipmap-xxxhdpi\appicon_round.png
 C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\r\mipmap-xxhdpi\appicon_round.png
 C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\r\mipmap-xhdpi\appicon_round.png
@@ -3148,3 +3143,4 @@ C:\Users\USER\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\stamp\_Conv
 C:\Users\USER\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\USER\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\USER\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\obj\Debug\net8.0-android\resizetizer\r\drawable\user.png

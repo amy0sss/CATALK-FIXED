@@ -1,14 +1,25 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CaTALK.MVVM.Views"
              x:Class="CaTALK.MVVM.Views.Home"
              Title="Home">
-    <VerticalStackLayout>
 
-        <Image Source="{Binding Avatar, FallbackValue='user.png'}"/>
-        <Label 
-            Text="{Binding Name, FallbackValue='Username'}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <ContentPage.Resources>
+        <Style x:Key="Profile" TargetType="Image">
+            <Setter Property="HeightRequest" Value="70"/>
+            <Setter Property="WidthRequest" Value="70"/>
+            <Setter Property="Aspect" Value="AspectFill"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout>
+        <Frame HeightRequest="70" WidthRequest="70" CornerRadius="100">
+            <Image Source="{Binding CurrentUser.avatar, FallbackValue='user.png'}" 
+                   Style="{StaticResource Profile}" />
+        </Frame>
+        <Label Text="{Binding CurrentUser.username, FallbackValue='Username'}"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
     </VerticalStackLayout>
+
 </ContentPage>

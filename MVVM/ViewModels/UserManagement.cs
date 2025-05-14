@@ -30,7 +30,9 @@ namespace CaTALK.MVVM.ViewModels
         private string _password;
         private string _confirmPassword;
         private string _avatar;
-        public ObservableCollection<User> Users = new ObservableCollection<User>();
+        private ObservableCollection<User> _users;
+        private User _currentUser;
+
         #endregion
 
         public UserManagement()
@@ -114,6 +116,18 @@ namespace CaTALK.MVVM.ViewModels
             set { _confirmPassword = value; OnPropertyChanged(); }
         }
 
+
+        public ObservableCollection<User> Users
+        {
+            get => _users;
+            set { _users = value; OnPropertyChanged(); }
+        }
+
+        public User CurrentUser
+        {
+            get => _currentUser;
+            set { _currentUser = value; OnPropertyChanged(); }
+        }
         #endregion
 
         #region API Controller Commands
@@ -135,19 +149,15 @@ namespace CaTALK.MVVM.ViewModels
             var response = await client.GetStringAsync($"{baseUrl}User/?username={encodedUsername}");
 
             var users = JsonSerializer.Deserialize<ObservableCollection<User>>(response, _serializerOptions);
+            Users = users;
             var user = users?.FirstOrDefault(u => u.password == Password);
 
-            Console.Write("Test");
-            Console.WriteLine($"Logging Results: {user}");
             if (user != null)
             {
-                Users.Add(user);
-                // Improve
-                Avatar = user.avatar;
-                Console.WriteLine($"Logging Results: {Users}\n Avatar: {Avatar}");
-
-                await App.Current.MainPage.Navigation.PushAsync(new Home());
+                CurrentUser = user; // Store the whole object
+                App.Current.MainPage = new NavigationPage(new Home { BindingContext = this });
             }
+
             else
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Invalid username or password.", "OK");

@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CaTALK.MVVM.ViewModels;
+using CaTALK.MVVM.Views;
+using Microsoft.Extensions.Logging;
 
 namespace CaTALK;
 
@@ -7,7 +9,9 @@ public static class MauiProgram
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
-		builder
+        builder.Services.AddSingleton<UserManagement>();
+        builder.Services.AddSingleton<Home>();
+        builder
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>
 			{
