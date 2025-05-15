@@ -62,7 +62,7 @@ namespace CaTALK.MVVM.ViewModels
             {
                 _isPassword = value;
                 OnPropertyChanged();
-                PasswordImage = _isPassword ? "eye_closed.png" : "eye.png";
+                PasswordImage = _isPassword ? "hide.png" : "view.png";
             }
         }
 
@@ -73,7 +73,7 @@ namespace CaTALK.MVVM.ViewModels
             {
                 _isConfirmPassword = value;
                 OnPropertyChanged();
-                ConfirmPasswordImage = _isConfirmPassword ? "eye_closed.png" : "eye.png";
+                ConfirmPasswordImage = _isConfirmPassword ? "hide.png" : "view.png";
             }
         }
 

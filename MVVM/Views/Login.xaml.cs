@@ -9,4 +9,9 @@ public partial class Login : ContentPage
 		InitializeComponent();
 		BindingContext = new UserManagement();
 	}
+
+    private void Tapped(object sender, TappedEventArgs e)
+    {
+		Navigation.PushAsync(new Register());
+    }
 }

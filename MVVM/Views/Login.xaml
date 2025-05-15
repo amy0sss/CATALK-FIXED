@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CaTALK.MVVM.Views.Login"
              Title="Login"
+             BackgroundImageSource="login.png"
              NavigationPage.HasNavigationBar="False"
              xmlns:local="CaTALK.MVVM.ViewModels">
 
@@ -22,91 +23,60 @@
             <Setter Property="PlaceholderColor" Value="#fafafa"/>
         </Style>
         <Style x:Key="PrimaryButton" TargetType="Button">
-            <Setter Property="BackgroundColor" Value="#1A2151"/>
+            <Setter Property="BackgroundColor" Value="#40085A"/>
             <Setter Property="TextColor" Value="#FFFFFF"/>
-            <Setter Property="CornerRadius" Value="12"/>
-            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="HeightRequest" Value="44"/>
+            <Setter Property="WidthRequest" Value="200"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="CharacterSpacing" Value="2"/>
             <Setter Property="FontSize" Value="28"/>
         </Style>
-        <Style x:Key="SecondaryButton" TargetType="Button">
-            <Setter Property="BackgroundColor" Value="Transparent"/>
-            <Setter Property="TextColor" Value="#3B82F6"/>
-            <Setter Property="BorderColor" Value="#3B82F6"/>
-            <Setter Property="BorderWidth" Value="1"/>
-            <Setter Property="CornerRadius" Value="12"/>
-            <Setter Property="HeightRequest" Value="50"/>
+        <Style x:Key="SubHeader" TargetType="Label">
+            <Setter Property="TextColor" Value="#61677D"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style x:Key="Header" TargetType="Label">
+            <Setter Property="TextColor" Value="#40085A"/>
             <Setter Property="FontAttributes" Value="Bold"/>
-            <Setter Property="FontSize" Value="16"/>
         </Style>
     </ContentPage.Resources>
     <!--#endregion-->
 
     <ScrollView>
-        <VerticalStackLayout Spacing="25">
-
-            <Frame CornerRadius="60" HasShadow="True" BorderColor="Transparent" Margin="0,-50,0,0">
-                <Frame.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="#0C3762" Offset="0.0" />
-                        <GradientStop Color="#CC3060A0" Offset="0.5" />
-                        <GradientStop Color="#A0E0FF" Offset="1.0" />
-                    </LinearGradientBrush>
-                </Frame.Background>
-
-                <VerticalStackLayout Margin="0,50,0,200" Spacing="15">
-                    <Frame CornerRadius="30" Padding="0" WidthRequest="400" HasShadow="True" BorderColor="Transparent">
-                        <Image HeightRequest="240" Aspect="AspectFill"/>
-                    </Frame>
-
-                    <StackLayout Spacing="3">
-                        <Label Text="AJL ELECTRONICS!" 
-                               FontSize="36" FontAttributes="Bold" CharacterSpacing="3"
-                               TextColor="DeepSkyBlue" 
-                               HorizontalOptions="Center">
-                            <Label.Shadow>
-                                <Shadow Brush="#3B82F6" Offset="2,2" Opacity="0.5"/>
-                            </Label.Shadow>
-                        </Label>
-                        <Label Text="We're thrilled to have you here again!" FontSize="16" TextColor="White" 
-                               HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="20,0,20,0"/>
-                    </StackLayout>
-                </VerticalStackLayout>
-            </Frame>
-
+        <VerticalStackLayout Spacing="10">
             <Frame Margin="20,-180,20,0" Padding="20" HeightRequest="780" HasShadow="True" CornerRadius="30" BorderColor="Transparent"
                    BackgroundColor="LightSkyBlue">
                 <VerticalStackLayout Spacing="30" VerticalOptions="Start">
-
-                    <StackLayout Spacing="10" Margin="0,10,0,0">
-                        <Label Text="Login to Your Account" FontSize="24" FontAttributes="Bold" TextColor="#2563EB" HorizontalOptions="Center"/>
-                        <Label Text="Access your personalized experience securely." FontSize="14" TextColor="#64748B" HorizontalOptions="Center"/>
-                    </StackLayout>
+                    <Label Text="Login" Style="{StaticResource Header}"
+                           FontSize="24" HorizontalOptions="Center"/>
+                    <HorizontalStackLayout Spacing="10" Margin="0,10,0,0">
+                        <Label Text="Find your perfect " Style="{StaticResource SubHeader}"/>
+                        <Label Text="CaTalk " FontAttributes="Bold" TextColor="#40085A"/>
+                        <Label Text="online using the #1 app." Style="{StaticResource SubHeader}"/>
+                    </HorizontalStackLayout>
 
                     <!-- Username -->
                     <Frame Style="{StaticResource InputFrame}" Margin="0,20,0,0">
-                        <HorizontalStackLayout Spacing="15">
-                            <Image  WidthRequest="30" HeightRequest="30"/>
-                            <Entry Placeholder="Username" Text="{Binding Username}" Style="{StaticResource InputEntry}" WidthRequest="350"/>
-                        </HorizontalStackLayout>
+                        <Entry Placeholder="Enter your username" Text="{Binding Username}" Style="{StaticResource InputEntry}" WidthRequest="350"/>
                     </Frame>
 
                     <!-- Password -->
                     <Frame Style="{StaticResource InputFrame}" Margin="0,10,0,0">
                         <HorizontalStackLayout Spacing="15">
-                            <Image  WidthRequest="30" HeightRequest="30"/>
-                            <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="{Binding IsPassword}" 
+                            <Entry Placeholder="Enter your password" Text="{Binding Password}" IsPassword="{Binding IsPassword}" 
                                    Style="{StaticResource InputEntry}" WidthRequest="310"/>
                             <ImageButton BackgroundColor="Transparent" WidthRequest="24" HeightRequest="24"/>
                         </HorizontalStackLayout>
                     </Frame>
 
                     <!-- Remember Me & Forgot Password -->
-                    <HorizontalStackLayout Spacing="5" Margin="0,0,0,20">
-                        <CheckBox Color="#3B82F6"/>
-                        <Label Text="Remember me" VerticalOptions="Center" FontSize="14" Margin="-10,0,250,0"/>
-                        <Label Text="Forgot Password?" TextColor="#3B82F6" HorizontalTextAlignment="End" FontSize="14" VerticalOptions="Center"/>
+                    <HorizontalStackLayout Spacing="5" Margin="0,0,40,0">
+                        <CheckBox Color="#40085A"/>
+                        <Label Text="Remember me" TextColor="#000C14" FontSize="14"
+                               VerticalOptions="Center" Margin="-10,0,0,0"/>
+                        <Label Text="Forgot Password?" TextColor="#000C14" FontSize="14"
+                               HorizontalTextAlignment="End" VerticalOptions="Center"/>
                     </HorizontalStackLayout>
 
                     <!-- Login Button -->
@@ -116,8 +86,11 @@
                     <Label HorizontalOptions="Center" Margin="0,15,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Don't have an account? " TextColor="#64748B" FontSize="16"/>
-                                <Span Text="Sign Up" TextColor="#2563EB" FontAttributes="Bold" FontSize="18">
+                                <Span Text="Don't have an account yet? " TextColor="#64748B" FontSize="16"/>
+                                <Span Text="Create Account" TextColor="#2563EB" FontAttributes="Bold" FontSize="18">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Tapped"/>
+                                    </Span.GestureRecognizers>
                                 </Span>
                             </FormattedString>
                         </Label.FormattedText>
