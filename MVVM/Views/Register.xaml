@@ -2,11 +2,35 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CaTALK.MVVM.Views.Register"
+             NavigationPage.HasBackButton="False"
              Title="Register">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <!-- Username -->
+        <Frame Style="{StaticResource InputFrame}" Margin="0,20,0,0">
+            <Entry Placeholder="Enter your username" Text="{Binding Username}" Style="{StaticResource InputEntry}" WidthRequest="350"/>
+        </Frame>
+
+        <!-- Password -->
+        <Frame Style="{StaticResource InputFrame}" Margin="0,10,0,0">
+            <HorizontalStackLayout Spacing="15">
+                <Entry Placeholder="Enter your password" Text="{Binding Password}" IsPassword="{Binding IsPassword}" 
+                                   Style="{StaticResource InputEntry}" WidthRequest="310"/>
+                <ImageButton BackgroundColor="Transparent" WidthRequest="24" HeightRequest="24"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Entry Placeholder="Enter your username" Text="{Binding Avatar}" Style="{StaticResource InputEntry}" WidthRequest="350"/>
+        <!-- Remember Me & Forgot Password -->
+        <HorizontalStackLayout Spacing="5" Margin="0,0,40,0">
+            <CheckBox Color="#40085A"/>
+            <Label Text="Remember me" TextColor="#000C14" FontSize="14"
+                               VerticalOptions="Center" Margin="-10,0,0,0"/>
+            <Label Text="Forgot Password?" TextColor="#000C14" FontSize="14"
+                               HorizontalTextAlignment="End" VerticalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <!-- Login Button -->
+        <Button Text="LOGIN" Style="{StaticResource PrimaryButton}" Command="{Binding Register}"/>
     </VerticalStackLayout>
 </ContentPage>

@@ -45,7 +45,7 @@
 
     <ScrollView>
         <VerticalStackLayout Spacing="10">
-            <Frame Margin="20,-180,20,0" Padding="20" HeightRequest="780" HasShadow="True" CornerRadius="30" BorderColor="Transparent"
+            <Frame Margin="20,180,20,0" Padding="20" HeightRequest="780" HasShadow="True" CornerRadius="30" BorderColor="Transparent"
                    BackgroundColor="LightSkyBlue">
                 <VerticalStackLayout Spacing="30" VerticalOptions="Start">
                     <Label Text="Login" Style="{StaticResource Header}"

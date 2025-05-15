@@ -10,6 +10,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using CaTALK.MVVM.Views;
+using System.Net;
 
 namespace CaTALK.MVVM.ViewModels
 {
@@ -149,6 +150,8 @@ namespace CaTALK.MVVM.ViewModels
             var response = await client.GetStringAsync($"{baseUrl}User/?username={encodedUsername}");
 
             var users = JsonSerializer.Deserialize<ObservableCollection<User>>(response, _serializerOptions);
+
+            // Add the user to the ObservableCollection Instance
             Users = users;
             var user = users?.FirstOrDefault(u => u.password == Password);
 
@@ -166,6 +169,62 @@ namespace CaTALK.MVVM.ViewModels
         #endregion
 
         #region REGISTER
+        public ICommand Register => new Command(async () =>
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(Username) ||
+                    string.IsNullOrWhiteSpace(Password) ||
+                    string.IsNullOrWhiteSpace(Avatar))
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Please fill all fields.", "OK");
+                    return;
+                }
+
+                ObservableCollection<User> existingUsers = new();
+
+                try
+                {
+                    var response = await client.GetStringAsync($"{baseUrl}User/?username={Uri.EscapeDataString(Username)}");
+                    existingUsers = JsonSerializer.Deserialize<ObservableCollection<User>>(response, _serializerOptions);
+                }
+                catch (HttpRequestException httpEx) when (httpEx.StatusCode == HttpStatusCode.NotFound)
+                {
+                    // No matching user found, proceed to register
+                }
+
+                if (existingUsers.Any(u => u.username == Username))
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Username already exists.", "OK");
+                    return;
+                }
+
+                var newUser = new User
+                {
+                    username = Username,
+                    password = Password,
+                    avatar = Avatar
+                };
+
+                var json = JsonSerializer.Serialize(newUser, _serializerOptions);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var result = await client.PostAsync($"{baseUrl}User", content);
+
+                if (result.IsSuccessStatusCode)
+                {
+                    await App.Current.MainPage.DisplayAlert("Success", "Account created successfully!", "OK");
+                    App.Current.MainPage = new NavigationPage(new Home { BindingContext = this });
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Registration failed. Try again.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Internal Server Error", ex.Message, "Close");
+            }
+        });
 
         #endregion
 
