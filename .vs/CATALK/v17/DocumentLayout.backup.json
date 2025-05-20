@@ -7,6 +7,9 @@
       "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\viewmodels\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|c:\\users\\act-student\\documents\\github\\catalk-fixed\\mvvm\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{592EAC4B-32B6-4320-9622-86869B8E7EF4}|CaTALK.csproj|solutionrelative:mvvm\\views\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -72,11 +75,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Test.xaml",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Test.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\Test.xaml",
@@ -85,12 +88,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-14T07:15:15.503Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -99,25 +101,27 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T07:23:27.387Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Home.xaml",
-              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Home.xaml",
-              "RelativeDocumentMoniker": "MVVM\\Views\\Home.xaml",
-              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Home.xaml",
-              "RelativeToolTip": "MVVM\\Views\\Home.xaml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-07T07:34:25.994Z",
-              "EditorCaption": ""
+              "DocumentIndex": 1,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\9.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AgIAAPYAAAAAAAAAAAApwAkBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-05-20T07:20:35.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Login.xaml",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Login.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\Login.xaml",
@@ -125,12 +129,11 @@
               "RelativeToolTip": "MVVM\\Views\\Login.xaml",
               "ViewState": "AgIAADQAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-07T07:24:31.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T07:24:31.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Register.xaml",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Register.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\Register.xaml",
@@ -138,12 +141,11 @@
               "RelativeToolTip": "MVVM\\Views\\Register.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-07T07:24:54.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T07:24:54.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Register.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Register.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\Register.xaml.cs",
@@ -151,8 +153,7 @@
               "RelativeToolTip": "MVVM\\Views\\Register.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T07:27:02.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T07:27:02.434Z"
             },
             {
               "$type": "Document",
@@ -162,14 +163,26 @@
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\UserManagement.cs",
               "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\ViewModels\\UserManagement.cs",
               "RelativeToolTip": "MVVM\\ViewModels\\UserManagement.cs",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAAAOMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAAAMIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T07:24:08.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "Home.xaml",
+              "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Home.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\Home.xaml",
+              "ToolTip": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Home.xaml",
+              "RelativeToolTip": "MVVM\\Views\\Home.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-07T07:34:25.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Models\\User.cs",
               "RelativeDocumentMoniker": "MVVM\\Models\\User.cs",
@@ -181,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Test.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Test.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\Test.xaml.cs",
@@ -189,12 +202,11 @@
               "RelativeToolTip": "MVVM\\Views\\Test.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T07:27:53.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T07:27:53.055Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Login.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Login.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\Login.xaml.cs",
@@ -202,12 +214,11 @@
               "RelativeToolTip": "MVVM\\Views\\Login.xaml.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAmwAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T04:11:11.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T04:11:11.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Home.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MVVM\\Views\\Home.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\Home.xaml.cs",
@@ -215,12 +226,11 @@
               "RelativeToolTip": "MVVM\\Views\\Home.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T07:35:58.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T07:35:58.666Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Xamarin.Android.Resource.Designer.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\34.0.147\\tools\\Xamarin.Android.Resource.Designer.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\packs\\Microsoft.Android.Sdk.Windows\\34.0.147\\tools\\Xamarin.Android.Resource.Designer.targets",
@@ -232,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\AppShell.xaml",
               "RelativeDocumentMoniker": "AppShell.xaml",
@@ -244,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -256,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
               "DocumentMoniker": "C:\\Users\\USER\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240802000\\buildTransitive\\Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\USER\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240802000\\buildTransitive\\Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
@@ -268,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\ACT-STUDENT\\Documents\\GitHub\\CATALK-FIXED\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",

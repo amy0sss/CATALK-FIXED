@@ -140,30 +140,31 @@ namespace CaTALK.MVVM.ViewModels
         #region LOGIN
         public ICommand Login => new Command(async () =>
         {
-            if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
+            try
             {
-                await App.Current.MainPage.DisplayAlert("Error", "Please fill all fields.", "OK");
-                return;
-            }
+                // User Validations
+                if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Please fill all fields.", "OK");
+                    return;
+                }
 
-            var encodedUsername = Uri.EscapeDataString(Username);
-            var response = await client.GetStringAsync($"{baseUrl}User/?username={encodedUsername}");
+                var encodedUsername = Uri.EscapeDataString(Username);
+                var encodedPassword = Uri.EscapeDataString(Password);
 
-            var users = JsonSerializer.Deserialize<ObservableCollection<User>>(response, _serializerOptions);
+                var response = await client.GetStringAsync($"{baseUrl}User/?username={encodedUsername}&password={encodedPassword}");
+                var users = JsonSerializer.Deserialize<ObservableCollection<User>>(response, _serializerOptions);
 
-            // Add the user to the ObservableCollection Instance
-            Users = users;
-            var user = users?.FirstOrDefault(u => u.password == Password);
-
-            if (user != null)
-            {
-                CurrentUser = user; // Store the whole object
-                App.Current.MainPage = new NavigationPage(new Home { BindingContext = this });
-            }
-
-            else
-            {
+                if (users != null)
+                {
+                    CurrentUser = users.First(); // Gets the user
+                    App.Current.MainPage = new NavigationPage(new Home { BindingContext = this });
+                }
                 await App.Current.MainPage.DisplayAlert("Error", "Invalid username or password.", "OK");
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Internal Server Error", ex.Message, "Close");
             }
         });
         #endregion
@@ -181,26 +182,25 @@ namespace CaTALK.MVVM.ViewModels
                     return;
                 }
 
+                // Handles the Not Found
                 ObservableCollection<User> existingUsers = new();
-
                 try
                 {
                     var response = await client.GetStringAsync($"{baseUrl}User/?username={Uri.EscapeDataString(Username)}");
-                    existingUsers = JsonSerializer.Deserialize<ObservableCollection<User>>(response, _serializerOptions);
+                    var existingUser = JsonSerializer.Deserialize<User>(response, _serializerOptions);
+
+                    if (existingUser != null)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Error", "Username already exists.", "OK");
+                        return;
+                    }
                 }
                 catch (HttpRequestException httpEx) when (httpEx.StatusCode == HttpStatusCode.NotFound)
                 {
-                    // No matching user found, proceed to register
+                    // Proceed
                 }
 
-                if (existingUsers.Any(u => u.username == Username))
-                {
-                    await App.Current.MainPage.DisplayAlert("Error", "Username already exists.", "OK");
-                    return;
-                }
-
-                var newUser = new User
-                {
+                var newUser = new User {
                     username = Username,
                     password = Password,
                     avatar = Avatar
@@ -212,6 +212,7 @@ namespace CaTALK.MVVM.ViewModels
 
                 if (result.IsSuccessStatusCode)
                 {
+                    CurrentUser = newUser;
                     await App.Current.MainPage.DisplayAlert("Success", "Account created successfully!", "OK");
                     App.Current.MainPage = new NavigationPage(new Home { BindingContext = this });
                 }
@@ -225,7 +226,6 @@ namespace CaTALK.MVVM.ViewModels
                 await App.Current.MainPage.DisplayAlert("Internal Server Error", ex.Message, "Close");
             }
         });
-
         #endregion
 
         #region HelperMethods
