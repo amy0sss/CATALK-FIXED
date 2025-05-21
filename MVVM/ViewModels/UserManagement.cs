@@ -33,6 +33,8 @@ namespace CaTALK.MVVM.ViewModels
         private string _avatar;
         private ObservableCollection<User> _users;
         private User _currentUser;
+        private ImageSource _photo;
+        private ImageSource _avatarImage;
 
         #endregion
 
@@ -43,10 +45,15 @@ namespace CaTALK.MVVM.ViewModels
             {
                 WriteIndented = true, //JSON payload configuration
             };
-
+            PickPhotoCommand = new Command(async () => await PickPhotoAsync());
         }
 
         #region OnPropertyChanged
+        public ImageSource AvatarImage
+        {
+            get => _avatarImage;
+            set => SetProperty(ref _avatarImage, value);
+        }
         public string Avatar
         {
             get => _avatar;
@@ -134,7 +141,11 @@ namespace CaTALK.MVVM.ViewModels
         #region API Controller Commands
         public ICommand TogglePasswordCommand => new Command(() => IsPassword = !IsPassword);
         public ICommand ToggleConfirmPasswordCommand => new Command(() => IsConfirmPassword = !IsConfirmPassword);
-
+        public ImageSource Photo
+        {
+            get => _photo;
+            set => SetProperty(ref _photo, value);
+        }
         #endregion
 
         #region LOGIN
@@ -183,21 +194,25 @@ namespace CaTALK.MVVM.ViewModels
                 }
 
                 // Handles the Not Found
-                ObservableCollection<User> existingUsers = new();
                 try
                 {
                     var response = await client.GetStringAsync($"{baseUrl}User/?username={Uri.EscapeDataString(Username)}");
-                    var existingUser = JsonSerializer.Deserialize<User>(response, _serializerOptions);
+                    var users = JsonSerializer.Deserialize<List<User>>(response, _serializerOptions);
 
-                    if (existingUser != null)
+                    var exactMatchUser = users?.FirstOrDefault(u => u.username.Equals(Username, StringComparison.OrdinalIgnoreCase));
+
+                    if (exactMatchUser != null)
                     {
-                        await App.Current.MainPage.DisplayAlert("Error", "Username already exists.", "OK");
-                        return;
+                        // User exists, proceed...
+                    }
+                    else
+                    {
+                        // No exact match found
                     }
                 }
                 catch (HttpRequestException httpEx) when (httpEx.StatusCode == HttpStatusCode.NotFound)
                 {
-                    // Proceed
+                    // No existing user found, continue
                 }
 
                 var newUser = new User {
@@ -232,6 +247,52 @@ namespace CaTALK.MVVM.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        #endregion
+
+        protected bool SetProperty<T>(ref T backingStore, T value, [CallerMemberName] string propertyName = "")
+        {
+            if (EqualityComparer<T>.Default.Equals(backingStore, value))
+                return false;
+
+            backingStore = value;
+            OnPropertyChanged(propertyName);
+            return true;
+        }
+
+        // PhotoGetter
+        public ICommand PickPhotoCommand { get; }
+
+        private async Task PickPhotoAsync()
+        {
+            try
+            {
+                var result = await MediaPicker.PickPhotoAsync();
+
+                if (result != null)
+                {
+                    var stream = await result.OpenReadAsync();
+                    var filePath = Path.Combine(FileSystem.CacheDirectory, result.FileName);
+
+                    using var fileStream = File.OpenWrite(filePath);
+                    await stream.CopyToAsync(fileStream);
+
+                    Avatar = filePath;
+                    UpdateAvatarImage();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error picking photo: {ex.Message}");
+            }
+        }
+
+        private void UpdateAvatarImage()
+        {
+            if (!string.IsNullOrWhiteSpace(Avatar))
+            {
+                AvatarImage = ImageSource.FromFile(Avatar);
+            }
+        }
     }
+    #endregion
 }
+

@@ -79,6 +79,8 @@
                                HorizontalTextAlignment="End" VerticalOptions="Center"/>
                     </HorizontalStackLayout>
 
+                    
+                    
                     <!-- Login Button -->
                     <Button Text="LOGIN" Style="{StaticResource PrimaryButton}" Command="{Binding Login}"/>
 

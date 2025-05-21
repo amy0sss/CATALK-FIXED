@@ -20,7 +20,17 @@
             </HorizontalStackLayout>
         </Frame>
 
-        <Entry Placeholder="Enter your username" Text="{Binding Avatar}" Style="{StaticResource InputEntry}" WidthRequest="350"/>
+        <!-- Avatar URL -->
+        <Frame Style="{StaticResource InputFrame}" Margin="0,10,0,0">
+            <Entry Placeholder="Paste image URL here" Text="{Binding Avatar}" Style="{StaticResource InputEntry}" WidthRequest="350"/>
+        </Frame>
+
+        <Button Text="Preview Avatar" Command="{Binding PickPhotoCommand}" Style="{StaticResource PrimaryButton}" WidthRequest="180"/>
+        <!-- Preview Button and Image -->
+        <Button Text="Preview Avatar" Command="{Binding PreviewAvatarCommand}" Style="{StaticResource PrimaryButton}" WidthRequest="180"/>
+
+        <Image Source="{Binding AvatarImage}" HeightRequest="120" WidthRequest="120" Margin="0,10,0,0"/>
+
         <!-- Remember Me & Forgot Password -->
         <HorizontalStackLayout Spacing="5" Margin="0,0,40,0">
             <CheckBox Color="#40085A"/>
