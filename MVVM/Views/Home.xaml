@@ -1,37 +1,115 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CaTALK.MVVM.Views"
              x:Class="CaTALK.MVVM.Views.Home"
              NavigationPage.HasNavigationBar="False"
-             Title="Home">
+             Title="Home"
+             BackgroundColor="{AppThemeBinding Light=#F8F9FA, Dark=#1A1A1A}">
 
     <ContentPage.Resources>
-        <Style x:Key="Profile" TargetType="Image">
-            <Setter Property="HeightRequest" Value="70"/>
-            <Setter Property="WidthRequest" Value="70"/>
-            <Setter Property="Aspect" Value="AspectFill"/>
-        </Style>
+        <ResourceDictionary>
+            <Style x:Key="Profile" TargetType="Image">
+                <Setter Property="HeightRequest" Value="70"/>
+                <Setter Property="WidthRequest" Value="70"/>
+                <Setter Property="Aspect" Value="AspectFill"/>
+            </Style>
+
+            <Style x:Key="HeaderStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=#212529, Dark=#F8F9FA}"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style x:Key="UsernameStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=#495057, Dark=#CED4DA}"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="0,10,0,0"/>
+            </Style>
+
+            <Style x:Key="CardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=#2D2D2D}"/>
+                <Setter Property="BorderColor" Value="{AppThemeBinding Light=#E9ECEF, Dark=#495057}"/>
+                <Setter Property="CornerRadius" Value="12"/>
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="HasShadow" Value="True"/>
+            </Style>
+
+            <Style x:Key="ProfileFrameStyle" TargetType="Frame">
+                <Setter Property="HeightRequest" Value="80"/>
+                <Setter Property="WidthRequest" Value="80"/>
+                <Setter Property="CornerRadius" Value="40"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="BorderColor" Value="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="HasShadow" Value="True"/>
+            </Style>
+        </ResourceDictionary>
     </ContentPage.Resources>
 
-    <VerticalStackLayout>
-        <Image x:Name="LogoImage" Source="applogo.png" WidthRequest="50" HorizontalOptions="Start"/>
-        <Label>
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span Text="Paws up, " />
-                    <Span Text="{Binding CurrentUser.username}" FontAttributes="Bold"/>
-                    <Span Text="! Welcome to your purr-sonal cat haven!" />
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
 
-        <Frame HeightRequest="70" WidthRequest="70" CornerRadius="100">
-            <Image Source="{Binding CurrentUser.avatar, FallbackValue='user.png'}" 
-                   Style="{StaticResource Profile}" />
-        </Frame>
-        <Label Text="{Binding CurrentUser.username, FallbackValue='Username'}"
-               VerticalOptions="Center"
-               HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            <!-- Header Section -->
+            <Frame Style="{StaticResource CardStyle}">
+                <Grid ColumnDefinitions="60,*,Auto" RowDefinitions="60">
+                    <Image x:Name="LogoImage" 
+                           Source="applogo.png" 
+                           HeightRequest="50" 
+                           WidthRequest="50"
+                           Grid.Column="0"
+                           VerticalOptions="Center"/>
 
+                    <Label Grid.Column="1" 
+                           Style="{StaticResource HeaderStyle}"
+                           Margin="15,0,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Paws up, " />
+                                <Span Text="{Binding CurrentUser.username, FallbackValue='User'}" 
+                                      FontAttributes="Bold"
+                                      TextColor="{AppThemeBinding Light=#007BFF, Dark=#0D6EFD}"/>
+                                <Span Text="!" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <!-- Notification/Menu Button -->
+                    <Button Grid.Column="2"
+                            Text="⋮"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            BackgroundColor="Transparent"
+                            TextColor="{AppThemeBinding Light=#6C757D, Dark=#ADB5BD}"
+                            WidthRequest="40"
+                            HeightRequest="40"
+                            CornerRadius="20"
+                            VerticalOptions="Center"/>
+                </Grid>
+            </Frame>
+
+            <Button Command="{Binding GetPosts}" Text="Get"/>
+            <StackLayout Padding="10">
+                <CollectionView ItemsSource="{Binding Posts}" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="LightGray" Padding="10" Margin="5" CornerRadius="10">
+                                <StackLayout>
+                                    <Label Text="{Binding PostAvatar}" WidthRequest="50" HeightRequest="50" />
+                                    <Label Text="{Binding caption}" FontAttributes="Bold" FontSize="Medium"/>
+                                    <Image Source="{Binding content}"/>
+                                    <Label Text="{Binding postedAt, StringFormat='{0:g}'}" FontSize="10" TextColor="Gray"/>
+                                    <Label Text="{Binding TimeAgo}" FontSize="10" TextColor="DarkGray"/>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

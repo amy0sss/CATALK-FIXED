@@ -204,7 +204,9 @@ namespace CaTALK.MVVM.ViewModels
                     }
 
                     CurrentUser = validUser;
-                    App.Current.MainPage = new NavigationPage(new Home { BindingContext = this });
+                    var userManagement = this; // or the current UserManagement instance
+                    var postManagement = new PostManagement(userManagement);
+                    App.Current.MainPage = new NavigationPage(new Home(postManagement));
                     return;
                 }
 
@@ -237,7 +239,7 @@ namespace CaTALK.MVVM.ViewModels
                 try
                 {
                     var response = await client.GetStringAsync($"{baseUrl}User/?username={Uri.EscapeDataString(Username)}");
-                    var users = JsonSerializer.Deserialize<List<User>>(response, _serializerOptions);
+                    var users = JsonSerializer.Deserialize<ObservableCollection<User>>(response, _serializerOptions);
 
                     if (users?.Any(u => u.username.Equals(Username, StringComparison.OrdinalIgnoreCase)) == true)
                     {
@@ -293,6 +295,35 @@ namespace CaTALK.MVVM.ViewModels
             }
         }
         #endregion
+
+        #region GetAllUser
+        public async Task FetchAllUsersAsync()
+        {
+            try
+            {
+                var response = await client.GetAsync($"{baseUrl}users"); // Your API endpoint
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    var users = JsonSerializer.Deserialize<ObservableCollection<User>>(json, _serializerOptions);
+
+                    Users = users;
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "Failed to load users.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", $"Exception: {ex.Message}", "Close");
+            }
+        }
+        #endregion
+
+
+
 
         #region Deactivate Profile
         public ICommand DeactivateAccount => new Command(async () =>
@@ -614,12 +645,6 @@ namespace CaTALK.MVVM.ViewModels
             var response = await client.PutAsync($"{baseUrl}User/{updatedUser.id}", content);
             return response.IsSuccessStatusCode;
         }
-
-        private void UploadViaUrl()
-        {
-
-        }
-
             #endregion
         }
 }

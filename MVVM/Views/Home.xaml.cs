@@ -1,20 +1,27 @@
-using CaTALK.MVVM.ViewModels;
+﻿using CaTALK.MVVM.ViewModels;
+using Microsoft.Maui;
 
 namespace CaTALK.MVVM.Views;
 public partial class Home : ContentPage
 {
-	public Home()
+    PostManagement postManager;
+    public Home()
 	{
 		InitializeComponent();
-		this.BindingContext = new UserManagement();
+		this.BindingContext = new PostManagement(new UserManagement());
 	}
-
-    protected override void OnAppearing()
+    public Home(PostManagement postManagement)
+    {
+        InitializeComponent();
+        this.BindingContext = postManagement;
+    }
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
-        AnimateLogo();
-    }
+        await postManager.InitializeAsync(); // ✅ safe to await here
 
+        AnimateLogo(); // or await if needed
+    }
     private async void AnimateLogo()
     {
         while (true)
@@ -24,5 +31,4 @@ public partial class Home : ContentPage
             await Task.Delay(1000); // pause between cycles
         }
     }
-
 }
