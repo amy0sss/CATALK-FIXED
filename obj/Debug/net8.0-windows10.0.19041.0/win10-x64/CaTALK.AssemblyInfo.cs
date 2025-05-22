@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CaTALK")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+bec44add05b662c760c1b5b6ba37dec97073ae7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+44b77d606c20702f9bb3591ae252f206e8924dab")]
 [assembly: System.Reflection.AssemblyProductAttribute("CaTALK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CaTALK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

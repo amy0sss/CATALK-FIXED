@@ -1,1 +1,1 @@
-C:\Users\ACT-STUDENT\Documents\GitHub\CATALK-FIXED\CaTALK.csproj;x64
+C:\Users\USER\Documents\GitHub\CATALK-FIXED\CaTALK.csproj;x64

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CaTALK.MVVM.Views.Login"
              Title="Login"
-             BackgroundImageSource="login.png"
+             BackgroundColor="White"
              NavigationPage.HasNavigationBar="False"
              xmlns:local="CaTALK.MVVM.ViewModels">
 
@@ -13,28 +13,28 @@
         <Style x:Key="InputFrame" TargetType="Frame">
             <Setter Property="CornerRadius" Value="12"/>
             <Setter Property="Padding" Value="15,10"/>
-            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="BackgroundColor" Value="#F5F9FE"/>
             <Setter Property="HasShadow" Value="True"/>
-            <Setter Property="BorderColor" Value="#E0E0E0"/>
+            <Setter Property="BorderColor" Value="#fafafa"/>
         </Style>
         <Style x:Key="InputEntry" TargetType="Entry">
             <Setter Property="FontSize" Value="22"/>
             <Setter Property="TextColor" Value="#333333"/>
-            <Setter Property="PlaceholderColor" Value="#fafafa"/>
+            <Setter Property="PlaceholderColor" Value="#E7E6FF"/>
         </Style>
         <Style x:Key="PrimaryButton" TargetType="Button">
             <Setter Property="BackgroundColor" Value="#40085A"/>
             <Setter Property="TextColor" Value="#FFFFFF"/>
-            <Setter Property="CornerRadius" Value="15"/>
-            <Setter Property="HeightRequest" Value="44"/>
-            <Setter Property="WidthRequest" Value="200"/>
+            <Setter Property="HeightRequest" Value="70"/>
+            <Setter Property="WidthRequest" Value="380"/>
+            <Setter Property="CornerRadius" Value="25"/>
             <Setter Property="FontAttributes" Value="Bold"/>
             <Setter Property="CharacterSpacing" Value="2"/>
-            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="FontSize" Value="34"/>
         </Style>
         <Style x:Key="SubHeader" TargetType="Label">
             <Setter Property="TextColor" Value="#61677D"/>
-            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontSize" Value="19"/>
         </Style>
         <Style x:Key="Header" TargetType="Label">
             <Setter Property="TextColor" Value="#40085A"/>
@@ -43,62 +43,61 @@
     </ContentPage.Resources>
     <!--#endregion-->
 
-    <ScrollView>
-        <VerticalStackLayout Spacing="10">
-            <Frame Margin="20,180,20,0" Padding="20" HeightRequest="780" HasShadow="True" CornerRadius="30" BorderColor="Transparent"
-                   BackgroundColor="LightSkyBlue">
-                <VerticalStackLayout Spacing="30" VerticalOptions="Start">
-                    <Label Text="Login" Style="{StaticResource Header}"
-                           FontSize="24" HorizontalOptions="Center"/>
-                    <HorizontalStackLayout Spacing="10" Margin="0,10,0,0">
-                        <Label Text="Find your perfect " Style="{StaticResource SubHeader}"/>
-                        <Label Text="CaTalk " FontAttributes="Bold" TextColor="#40085A"/>
-                        <Label Text="online using the #1 app." Style="{StaticResource SubHeader}"/>
+    <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+        <Frame BackgroundColor="#40085A" HeightRequest="800" CornerRadius="275" Margin="0,-450,0,0"/>
+        <Image Source="applogo.png" HeightRequest="300" Margin="0,-350,0,0"/>
+        <Label Text="Paws and Login!" Style="{StaticResource Header}" Margin="0,70,0,0"
+                           FontSize="42" FontAttributes="Bold" HorizontalOptions="Center"/>
+        <Frame Margin="20,10,20,0" Padding="20" HeightRequest="700" HasShadow="True" CornerRadius="30" BorderColor="#f7f7f7"
+                   BackgroundColor="White">
+            <VerticalStackLayout Spacing="30" VerticalOptions="Start">
+                <HorizontalStackLayout Spacing="6" Margin="0,40,0,5" HorizontalOptions="Center">
+                    <Label Text="Slip into your" Style="{StaticResource SubHeader}"/>
+                    <Label Text="CaTalk" Style="{StaticResource SubHeader}" FontSize="20" FontAttributes="Bold" TextColor="#40085A"/>
+                    <Label Text="account and start purr-fect conversations." Style="{StaticResource SubHeader}"/>
+                </HorizontalStackLayout>
+
+                <!-- Username -->
+                <Frame Style="{StaticResource InputFrame}" Margin="0,20,0,10">
+                    <Entry Placeholder="Enter your username" Text="{Binding Username}" Style="{StaticResource InputEntry}" 
+                           HorizontalOptions="Start" WidthRequest="410"/>
+                </Frame>
+
+                <!-- Password -->
+                <Frame Style="{StaticResource InputFrame}" Margin="0,10,0,0">
+                    <HorizontalStackLayout Spacing="15">
+                        <Entry Placeholder="Enter your password" Text="{Binding Password}" IsPassword="{Binding IsPassword}" 
+                               Style="{StaticResource InputEntry}" WidthRequest="410" 
+                               TextChanged="PasswordTextChanged"/>
+                        <ImageButton Source="{Binding PasswordImage}" Command="{Binding TogglePasswordCommand}"
+                                         BackgroundColor="Transparent" WidthRequest="30" HeightRequest="30" Margin="15,0,0,0"/>
                     </HorizontalStackLayout>
+                </Frame>
 
-                    <!-- Username -->
-                    <Frame Style="{StaticResource InputFrame}" Margin="0,20,0,0">
-                        <Entry Placeholder="Enter your username" Text="{Binding Username}" Style="{StaticResource InputEntry}" WidthRequest="350"/>
-                    </Frame>
+                <Label Text="{Binding ErrorMessage}" IsVisible="{Binding IsHidden}" FontSize="16" TextColor="Red" Margin="10,-10,0,0" 
+                           HorizontalOptions="Start" VerticalOptions="Center"/>
+                
+                <!-- Remember Me & Forgot Password -->
+                <Label Text="Forgot Password?" TextColor="#000C14" FontSize="16" FontAttributes="Bold"
+                       VerticalOptions="Center" HorizontalTextAlignment="End" Margin="0,0,5,0"/>
 
-                    <!-- Password -->
-                    <Frame Style="{StaticResource InputFrame}" Margin="0,10,0,0">
-                        <HorizontalStackLayout Spacing="15">
-                            <Entry Placeholder="Enter your password" Text="{Binding Password}" IsPassword="{Binding IsPassword}" 
-                                   Style="{StaticResource InputEntry}" WidthRequest="310"/>
-                            <ImageButton BackgroundColor="Transparent" WidthRequest="24" HeightRequest="24"/>
-                        </HorizontalStackLayout>
-                    </Frame>
+                <!-- Login Button -->
+                <Button Text="LOGIN" Style="{StaticResource PrimaryButton}" Command="{Binding Login}" Margin="0,25,0,0"/>
 
-                    <!-- Remember Me & Forgot Password -->
-                    <HorizontalStackLayout Spacing="5" Margin="0,0,40,0">
-                        <CheckBox Color="#40085A"/>
-                        <Label Text="Remember me" TextColor="#000C14" FontSize="14"
-                               VerticalOptions="Center" Margin="-10,0,0,0"/>
-                        <Label Text="Forgot Password?" TextColor="#000C14" FontSize="14"
-                               HorizontalTextAlignment="End" VerticalOptions="Center"/>
-                    </HorizontalStackLayout>
-
-                    
-                    
-                    <!-- Login Button -->
-                    <Button Text="LOGIN" Style="{StaticResource PrimaryButton}" Command="{Binding Login}"/>
-
-                    <!-- Sign-up Link -->
-                    <Label HorizontalOptions="Center" Margin="0,15,0,0">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Don't have an account yet? " TextColor="#64748B" FontSize="16"/>
-                                <Span Text="Create Account" TextColor="#2563EB" FontAttributes="Bold" FontSize="18">
-                                    <Span.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="Tapped"/>
-                                    </Span.GestureRecognizers>
-                                </Span>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </VerticalStackLayout>
-            </Frame>
-        </VerticalStackLayout>
-    </ScrollView>
+                <!-- Sign-up Link -->
+                <Label HorizontalTextAlignment="Center" Margin="0,100,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Don't have an account yet? " TextColor="#000000" FontSize="20"/>
+                            <Span Text="Create Account" TextColor="#40085A" FontAttributes="Bold" FontSize="22">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Tapped"/>
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
 </ContentPage>
